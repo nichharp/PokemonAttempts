@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="pokeFight">
+<body background="Pokemon-Backgrounds.png">
+<title style="color:#FFFFFF">Pokemon Project</title>
+
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+        .button {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 24px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+        }
+
+        .button:hover {background-color: #3e8e41}
+
+        .button:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+    </style>
+
+    <button ui-sref="fight">PokeBattler</button>
+    <button ui-sref="search">PokeSearcher</button>
+    <button ui-sref="box">PokeBox</button>
+
+
+</head>
+<body style="color:#FFFFFF">
+
+
+<div ui-view></div>
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/ui-router.min.js"></script>
+
+    <script src="app/app.js"></script>
+    <script src="app/app-state-manager.js"></script>
+
+    <script src="app/services/getJson/gettingJson.js"></script>
+<script src="app/services/getJson/Json.js"></script>
+<script src="app/services/getJson/pokeservice.js"></script>
+<script src="app/services/dal/dal.js"></script>
+
+<script src="app/services/dal/pokedal.js"></script>
+
+
+    <script src="app/feature/fight/fightcontroller.js"></script>
+    <script src="app/feature/search/searchcontroller.js"></script>
+    <script src="app/feature/box/boxcontroller.js"></script>
+</body>
+</html>

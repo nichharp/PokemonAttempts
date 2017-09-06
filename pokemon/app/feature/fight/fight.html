@@ -1,0 +1,40 @@
+<div ng-controller="fightController as ctrl">
+    <!--<h2 style="color:#FFFFFF">FIGHT SMOL POKEMONS</h2>-->
+    <!--<br>-->
+    <!--<text style="color:#FFFFFF">this is the fight Page</text>-->
+
+
+    <!--<table class="table table-striped">-->
+        <!--<tr>-->
+            <!--<th ng-click="ctrl.Main()">Name</th>-->
+        <!--</tr>-->
+        <!--<tr ng-repeat="poke in ctrl.pokemon>-->
+            <!--<td>{{poke.name | uppercase}}</td>-->
+        <!--</tr>-->
+    <!--</table>-->
+
+    <!-- app search page-->
+    <div data-role="page" id="pokeSearch-page">
+        <div data-role="header" data-theme="b">
+            <h1>Pokeapi Demos</h1>
+        </div>
+        <div data-role="main" class="ui-content">
+            <form id="pokeForm" action="#pokeDetails-page" method="post">
+                <div>
+                    <label for="pokeInput">Pokemon name or number:
+                        <input type="text" name="pokeInput" id="pokeInput" placeholder="Name/Number" value="">
+                </div>
+                <br>
+                <div>
+                    <a class="ui-btn" onclick="pokeSubmit();">Search
+                </div>
+            </form>
+            <div>
+                <ul data-role="listview" data-inset="true" id="pokeDetails">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+</div>
